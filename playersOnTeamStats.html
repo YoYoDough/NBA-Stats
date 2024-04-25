@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Player Stats for Team</h1>
+    <div id="team-stats">
+        <!-- Render team data here -->
+        <% teamData.forEach(team => { %>
+            <div class="team-info">
+                <h2><%= team.name %></h2>
+                <!-- Render team information as needed -->
+            </div>
+        <% }); %>
+    </div>
+    <div id="player-stats">
+        <table id="player-table">
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Position</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Render player data here -->
+                <% playerData.forEach(player => { %>
+                    <tr>
+                        <td><%= player.name %></td>
+                        <td><%= player.position %></td>
+                        <td><%= player.height %></td>
+                        <td><%= player.weight %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
