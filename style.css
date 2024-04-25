@@ -1,0 +1,96 @@
+/* Container for the content */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Tables container */
+.tables-container {
+    display: flex;
+    justify-content: center; /* Center the tables horizontally */
+    width: 100%; /* Use the full width of the container */
+    margin-top: 20px; /* Add some space between the tables and other elements */
+}
+
+/* Styling for tables */
+table {
+    width: 1000px;; /* Adjust the width as needed */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styling for table headers */
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    width: 150px; /* Adjust the width as needed */
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px; /* Add padding for spacing */
+    text-align: center; /* Center the text horizontally */
+}
+
+/* Styling for table rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+#team-link {
+    color: rgba(43, 40, 231, 0.966);
+    text-decoration: none; /* Remove underline */
+}
+
+#team-link:hover {
+    color: rgba(43, 40, 231, 0.795); /* Change to your desired hover color */
+}
+
+/* style.css */
+.container {
+    max-width: 1200px;
+    margin: 60px auto 0; /* Added top margin of 60px to move content down */
+}
+
+/* Navbar styles */
+.navigation {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .navigation a {
+    text-decoration: none;
+    color: #333333;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  
+  .navigation a:hover {
+    background-color: #dddddd;
+  }
