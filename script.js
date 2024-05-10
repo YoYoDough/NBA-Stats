@@ -129,8 +129,30 @@
         // Append table to the specified container
         $(containerId).append(table);
     }
+    // Function to animate the fadeIn effect of the table
+    function fadeInTable() {
+        console.log("fadeInTable function is executed.");
+        anime({
+            targets: '.tables-container',
+            opacity: [0, 1],
+            duration: 4000,
+            easing: 'easeInOutQuad'
+        });
+    }
+
+    // Function to animate the NBA logo sliding into view
+    function slideInLogo() {
+        anime({
+            targets: '.nba-logo',
+            left: '10px', // Adjust the final position as needed
+            duration: 4000, // Animation duration in milliseconds
+            easing: 'easeInOutQuad' // Easing function for smooth animation
+        });
+    }
     
     document.addEventListener('DOMContentLoaded', function() {
+        slideInLogo();
+        fadeInTable(); // Trigger the fadeIn animation when the page loads
         document.body.addEventListener('click', function(event) {
             if (event.target && event.target.classList.contains('team-link')) {
                 event.preventDefault();

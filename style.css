@@ -70,7 +70,7 @@ tr:hover {
 /* style.css */
 .container {
     max-width: 1200px;
-    margin: 60px auto 0; /* Added top margin of 60px to move content down */
+    margin: 100px auto 0; /* Added top margin of 60px to move content down */
 }
 
 /* Navbar styles */
@@ -81,6 +81,7 @@ tr:hover {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 80px;
     text-align: center;
   }
   .navigation a {
@@ -88,9 +89,17 @@ tr:hover {
     color: #333333;
     padding: 10px 20px;
     display: inline-block;
+    vertical-align: middle;
   }
   
   
   .navigation a:hover {
     background-color: #dddddd;
   }
+
+  .nba-logo {
+    position: absolute;
+    left: 500px; /* Initial position off-screen */
+    height: 70px;
+    width: 100px;
+}

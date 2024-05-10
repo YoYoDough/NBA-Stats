@@ -8,13 +8,17 @@
 </head>
 <body>
     <div class="navigation">
+        <img src="pictures/nba-logo.jpg" alt="NBA Logo" class="nba-logo">
         <a href="games-today.html">Games Today</a>
         <a href="index.html">Team Standings</a>
     </div>
-    <select id="team-selector">
-        <!-- Options will be dynamically added here -->
-    </select>
+    <!-- Search Input Field -->
+    <div class="search-container">
+        <input type="text" id="player-search" placeholder="Search for a player...">
+        <button onclick="searchPlayer()">Search</button>
+    </div>
 
+    <!-- Player Data Display -->
     <div id="player-data">
         <!-- Player data will be displayed here -->
     </div>
