@@ -5,11 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Truculenta:opsz,wght@12..72,573&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navigation">
-        <a href="players.html">Search Players</a>
-        <a href="index.html">Team Standings</a>
+    <div class="navigation" style = "background-color: black;">
+        <img src="pictures/nba-logo.jpg" alt="NBA Logo" class="nba-logo">
+        <a href="players.html" style = "color: white">Search Players</a>
+        <a href="index.html" style = "color: white">Team Standings</a>
     </div>
+        <h1 style = "margin-top: 150px; text-align: center;">NBA Game Scores</h1>
+        <div class="dropdown">
+            <select id="date-dropdown">
+                <!-- Options will be dynamically added here -->
+            </select>
+            <button>Fetch Game Data</button>
+        </div>
+        <div class = "games-container">
+            <div id="left-player-image-container">
+                <img id="left-player-image" src="https://cdn.nba.com/manage/2024/05/USATSI_23234249-scaled-e1715379366153.jpg?w=694&h=568" alt="SGA">
+            </div>
+            <div id="game-results">
+                <!-- Game results will be displayed here -->
+            </div>
+            <div id="right-player-image-container">
+                <img id="right-player-image" src="https://cdn.nba.com/manage/2024/05/USATSI_23241192-scaled.jpg?w=694&h=568" alt="Nembhard">
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="gamesToday.js"></script>
 </body>
 </html>

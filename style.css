@@ -1,3 +1,8 @@
+/* Apply Roboto Condensed to the body */
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 /* Container for the content */
 .container {
     max-width: 960px;
@@ -68,7 +73,7 @@ tr:hover {
 }
 
 /* style.css */
-.container {
+.data-container {
     max-width: 1200px;
     margin: 100px auto 0; /* Added top margin of 60px to move content down */
 }
@@ -102,4 +107,145 @@ tr:hover {
     left: 500px; /* Initial position off-screen */
     height: 70px;
     width: 100px;
+}
+
+.search-container{
+    text-align: center;
+    margin: 40px auto 0;
+}
+
+.search-container input[type="text"] {
+    width: 300px; /* Adjust the width of the search input */
+    padding: 10px; /* Add padding to the input field */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    border: 1px solid #ccc; /* Add border for visual distinction */
+    font-size: 16px; /* Adjust font size */
+}
+
+.search-container button {
+    padding: 10px 20px; /* Add padding to the button */
+    background-color: #007bff; /* Example button color */
+    color: #fff; /* Example button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Add margin between input and button */
+}
+
+.search-container button:hover {
+    background-color: #0056b3; /* Example button color on hover */
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Align items vertically center */
+    justify-content: space-between; /* Position items at the beginning and end of the container */
+}
+#player-data {
+    max-width: 600px;
+    margin: 80 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align player data to the left */
+}
+
+#player-data h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#player-data p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+#right-player-image-container {
+    position: absolute;
+    right: 50px; /* Adjust as needed */
+    top: 300px;
+}
+#left-player-image-container {
+    position: absolute;
+    left: 20px;
+    top: 300px;
+}
+
+#player-image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+/* Styles for the dropdown */
+.dropdown {
+    margin-bottom: 20px;
+}
+
+.dropdown select {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; /* Remove default arrow */
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.dropdown button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown button:hover {
+    background-color: #0056b3;
+}
+
+#game-results {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styles for game results */
+.game-result {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.game-result h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.game-result .teams {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.game-result .team {
+    flex: 1;
+    text-align: center;
+}
+
+.game-result .team-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game-result .team-score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5733; /* Red color for scores */
 }

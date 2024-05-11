@@ -5,24 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Players</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Truculenta:opsz,wght@12..72,573&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="navigation">
+    <div class="navigation" style = "background-color: black;">
         <img src="pictures/nba-logo.jpg" alt="NBA Logo" class="nba-logo">
-        <a href="games-today.html">Games Today</a>
-        <a href="index.html">Team Standings</a>
+        <a href="games-today.html" style = "color: white">Games Today</a>
+        <a href="index.html" style = "color: white">Team Standings</a>
     </div>
     <!-- Search Input Field -->
-    <div class="search-container">
-        <input type="text" id="player-search" placeholder="Search for a player...">
-        <button onclick="searchPlayer()">Search</button>
+    <h2 style ="margin-top: 130px;">Search Any Player!</h2>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="player-search" placeholder="Search for a player...">
+            <button onclick="searchPlayer()">Search</button>
+        </div>
+        <div id="player-data">
+            <!-- Player data will be displayed here -->
+        </div>
+        <div id="left-player-image-container">
+            <img id="left-player-image" src="https://cdn.nba.com/manage/2024/05/GettyImages-2151846755-scaled.jpg?w=694&h=568" alt="Left Player Image">
+        </div>
+        <div id="right-player-image-container">
+            <img id="right-player-image" src="https://cdn.nba.com/manage/2024/05/GettyImages-2151839999-scaled.jpg?w=694&h=568" alt="Right Player Image">
+        </div>
     </div>
-
-    <!-- Player Data Display -->
-    <div id="player-data">
-        <!-- Player data will be displayed here -->
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
     <script src="playersScript.js"></script>
 </body>
 </html>
