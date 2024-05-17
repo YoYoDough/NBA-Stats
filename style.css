@@ -6,6 +6,7 @@ body {
 /* Container for the content */
 .container {
     max-width: 960px;
+    width: 90%; /* Adjust the width as needed */
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -27,7 +28,7 @@ h2 {
 
 /* Styling for tables */
 table {
-    width: 1000px;; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: #fff;
@@ -73,7 +74,7 @@ tr:hover {
 }
 
 /* style.css */
-.data-container {
+container {
     max-width: 1200px;
     margin: 100px auto 0; /* Added top margin of 60px to move content down */
 }
@@ -137,11 +138,45 @@ tr:hover {
     background-color: #0056b3; /* Example button color on hover */
 }
 
-.container {
+/* Default styles */
+.data-container {
+    margin-top: 50px;
     display: flex;
-    align-items: center; /* Align items vertically center */
-    justify-content: space-between; /* Position items at the beginning and end of the container */
+    align-items: center;
+    justify-content: space-between;
 }
+
+#left-player-image,
+#right-player-image {
+    width: 100%; /* Adjust the percentage as needed for medium-sized images */
+    max-width: 500px; /* Set a maximum width for the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#left-player-image-container,
+#right-player-image-container {
+    flex: 0 0 auto; /* Allow the image containers to grow or shrink as needed */
+    min-width: 150px; /* Set a minimum width for the image containers */
+}
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    #left-player-image,
+    #right-player-image {
+        width: 100%; /* Adjust the percentage for smaller screens */
+        max-width: 250px; /* Adjust the maximum width */
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    #left-player-image,
+    #right-player-image {
+        width: 100%; /* Adjust the percentage for smaller screens */
+        max-width: 100px; /* Adjust the maximum width */
+    }
+}
+
 #player-data {
     max-width: 600px;
     margin: 80 auto;
@@ -162,20 +197,6 @@ tr:hover {
     margin-bottom: 5px;
 }
 
-#right-player-image-container {
-    position: absolute;
-    right: 50px; /* Adjust as needed */
-    top: 300px;
-}
-#left-player-image-container {
-    position: absolute;
-    left: 20px;
-    top: 300px;
-}
-
-#player-image {
-    max-width: 100%; /* Ensure the image doesn't exceed its container */
-}
 
 /* Styles for the dropdown */
 .dropdown {
@@ -208,9 +229,18 @@ tr:hover {
     background-color: #0056b3;
 }
 
+.games-container {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Adjust width to fill the container */
+}
+
+
 #game-results {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Styles for game results */

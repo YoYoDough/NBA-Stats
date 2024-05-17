@@ -8,9 +8,9 @@ function slideInLogo() {
     });
 }
 
-const fetchPlayerId = async (playerName) => {
+const fetchPlayerId = async (firstName, lastName) => {
     try {
-        const response = await fetch(`https://api.balldontlie.io/v1/players?search=${playerName}`, {
+        const response = await fetch(`https://api.balldontlie.io/v1/players?first_name=${firstName}&last_name=${lastName}`, {
             headers: {
                 'Authorization': '03201607-47e8-4163-b8c1-7fc113495a7e'
             }
@@ -72,12 +72,14 @@ const displayPlayerStats = (playerData, playerStats) => {
 async function searchPlayer() {
     try {
         // Get the input value
-        var playerName = document.getElementById("player-search").value.trim();
-    
+        var playerName = document.getElementById("player-search").value;
+        var names = playerName.split(" ");
+        var firstName = names[0];
+        var lastName = names.slice(1).join(" ");
         // Make sure the input is not empty
         if (playerName.trim() !== "") {
             // Fetch player data using the provided function
-            const playerData = await fetchPlayerId(playerName);
+            const playerData = await fetchPlayerId(firstName, lastName);
 
             // Fetch player stats using the player's ID
             const playerStats = await fetchPlayerStats(playerData.id);
